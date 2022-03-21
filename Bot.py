@@ -35,6 +35,31 @@ def message_reply(message):
         markup.add(item6, item7)
         bot.send_message(message.chat.id,"Можете выбрать транспорт", reply_markup=markup)
         
+        
+@bot.message_handler(content_types='text')
+def message_reply(message):
+    if(message.text=="Взять тяжелое оружие"):
+        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item8= types.KeyboardButton("AK-47")
+        item9= types.KeyboardButton("M4A4")
+        item10= types.KeyboardButton("AUG")
+        markup.add(item8, item9, item10)
+        bot.send_message(message.chat.id,"Можете выбрать оружие", reply_markup=markup)
+    elif(message.text=="Взять легкое оружие"):
+        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item11= types.KeyboardButton("USP-S")
+        item12= types.KeyboardButton("Five-Seven") 
+        item13= types.KeyboardButton("Desert Eagle")
+        markup.add(item11, item12, item13)
+        bot.send_message(message.chat.id,"Можете выбрать оружие ", reply_markup=markup)
+     elif(message.text=="Взять холодное оружие"):
+        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item14= types.KeyboardButton("Штык-нож")
+        item15= types.KeyboardButton("Складной-нож") 
+        item16= types.KeyboardButton("Охотничий-нож")
+        markup.add(item14, item15, item16)
+        bot.send_message(message.chat.id,"Можете выбрать оружие ", reply_markup=markup)
+        
 
 
 
