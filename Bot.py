@@ -23,16 +23,16 @@ def button_message(message):
 def message_reply(message):
     if (message.text=="Игрок идет налево"):
         markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1= types.KeyboardButton("Взять тяжелое оружие")
-        item2= types.KeyboardButton("Взять легкое оружие")
-        item3= types.KeyboardButton("Взять холодное оружие")
-        markup.add(item1, item2, item3)
+        item3= types.KeyboardButton("Взять тяжелое оружие")
+        item4= types.KeyboardButton("Взять легкое оружие")
+        item5= types.KeyboardButton("Взять холодное оружие")
+        markup.add(item3, item4, item5)
         bot.send_message(message.chat.id,"Можете снарядиться", reply_markup=markup)
      elif (message.text=="Игрок идет направо"):
         markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1= types.KeyboardButton("автомобиль")
-        item2= types.KeyboardButton("танк") 
-        markup.add(item1, item2)
+        item6= types.KeyboardButton("автомобиль")
+        item7= types.KeyboardButton("танк") 
+        markup.add(item6, item7)
         bot.send_message(message.chat.id,"Можете выбрать транспорт", reply_markup=markup)
         
 
